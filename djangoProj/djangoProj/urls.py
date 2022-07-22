@@ -20,6 +20,6 @@ from .views import firstPage
 urlpatterns = [
     path('admin/',
          admin.site.urls),
-    path("", firstPage)
+    path("", firstPage),
 ]
 
