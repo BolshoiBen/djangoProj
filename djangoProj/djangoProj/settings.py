@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'crm.apps.CrmConfig',    ###ТЕПЕРЬ python ВИДИТ НАШЕ ПРИЛОЖЕНИЕ CRM / в строке нужно ссылаться на класс нашего приложения, которое находится в apps.py
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
