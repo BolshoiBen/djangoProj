@@ -1,11 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
     <h1>{{object_list}}</h1>
+</br>
+<form action="{%url 'thann'%}" method="POST">
+    {% csrf_token %}
+    <label>Имя</label>
+    <input name="name">
+    <label>Телефон</label>
+    <input name="phone">
+    <button type="submit">ОТПРАВИТЬ </button>
+</form>   </br>
 {% for obj in object_list %}
 <h2>{{obj.id}}</h2>
 <h2>{{obj.order_dt}}</h2>
