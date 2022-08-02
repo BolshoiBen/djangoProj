@@ -7,6 +7,15 @@
 <body>
     <h1>{{object_list}}</h1>
 </br>
+
+<style>
+.css_input{
+color:yellow;
+background-color:red;
+}
+
+</style>
+
 <form action="{%url 'thann'%}" method="POST">
     {% csrf_token %}
     <label>Имя</label>
@@ -15,6 +24,15 @@
     <input name="phone">
     <button type="submit">ОТПРАВИТЬ </button>
 </form>   </br>
+
+
+</br>
+<form action="{%url 'thann'%}" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">ОТПРАВИТЬ </button>
+</form>   </br>
+
 {% for obj in object_list %}
 <h2>{{obj.id}}</h2>
 <h2>{{obj.order_dt}}</h2>
