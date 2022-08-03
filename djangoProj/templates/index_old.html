@@ -24,14 +24,8 @@
     {% csrf_token %}
     {{form.as_p}}
     <button type="submit">ОТПРАВИТЬ </button>
-</form>   </br>
+</form>   </br><br>
 
-{% for obj in object_list %}
-<h2>{{obj.id}}</h2>
-<h2>{{obj.order_dt}}</h2>
-<h2>{{obj.order_namer}}</h2>
-<h2>{{obj.order_phone}}</h2>
-{%endfor%}
 
 {% if object_list %}
 <table border="2">
@@ -53,5 +47,13 @@
 {%else%}
 Нет данных
 {%endif%}
+ <br>
+{% for obj in object_list %}
+<h2>{{obj.id}}</h2>
+<h2>{{obj.order_dt}}</h2>
+<h2>{{obj.order_namer}}</h2>
+<h2>{{obj.order_phone}}</h2>
+{%endfor%}
+
 </body>
 </html>
