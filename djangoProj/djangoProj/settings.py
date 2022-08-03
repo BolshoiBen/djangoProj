@@ -118,12 +118,14 @@ USE_TZ = True
 STATICFILES_DIRS=[
     BASE_DIR / "djangoProj/static",
 ]
-STATIC_URL = 'static/'
-
+STATIC_URL = 'static/'                          #Статические файл
+                                                    #Выбрали путь для сохраниния
+                                                        #Для заполнения папки статик файлов, используем
+                                                            #admin$ python manage.py collectstatic
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_URL = 'media/'
-
+                                                #Медиа файлы
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Default primary key field type
