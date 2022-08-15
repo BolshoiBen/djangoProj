@@ -1,0 +1,5 @@
+/.idea/
+/venv/
+/djangoProj/venv/
+/djangoProj/djangoProj/__pycache__/
+/djangoProj/crm/__pycache__/
